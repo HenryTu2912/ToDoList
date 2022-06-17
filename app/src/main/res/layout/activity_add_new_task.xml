@@ -28,7 +28,7 @@
                 android:background="@color/green"
                 android:text="Add"
                 android:textColor="@color/white"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="HardcodedText,TextContrastCheck" />
 
             <TextView
                 android:id="@+id/textView"
@@ -40,7 +40,8 @@
                 android:textSize="25sp"
                 android:gravity="center"
                 android:textColor="@color/orange"
-                android:layout_margin="20dp"/>
+                android:layout_margin="20dp"
+                tools:ignore="HardcodedText" />
 
             <Button
                 android:id="@+id/btnCancel"
@@ -51,7 +52,7 @@
                 android:background="@color/green"
                 android:text="Cancel"
                 android:textColor="@color/white"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="ButtonOrder,HardcodedText,TextContrastCheck" />
         </LinearLayout>
 
         <EditText
@@ -61,7 +62,8 @@
             android:layout_margin="10dp"
             android:layout_marginBottom="20dp"
             android:hint="Task"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="HardcodedText,TextFields,TouchTargetSizeCheck"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/edDetails"
@@ -70,7 +72,8 @@
             android:lines="3"
             android:gravity="left"
             android:hint="Notes"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            tools:ignore="Autofill,HardcodedText,RtlHardcoded,TextFields" />
 
         <TextView
             android:layout_width="match_parent"
@@ -78,13 +81,15 @@
             android:hint="Date and Time"
             android:padding="20dp"
             android:textSize="20sp"
-            android:id="@+id/dateTime"/>
+            android:id="@+id/dateTime"
+            tools:ignore="HardcodedText" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/captureImage"
-            android:padding="20dp" />
+            android:padding="20dp"
+            tools:ignore="ContentDescription" />
 
 
     </LinearLayout>
@@ -99,7 +104,8 @@
         app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.96"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imgCamera"
@@ -111,5 +117,7 @@
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.96"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription,HardcodedText" />
 </android.support.constraint.ConstraintLayout>
